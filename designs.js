@@ -30,6 +30,7 @@ function makeGrid() {
   let height = document.getElementById("inputHeight").value;
   let width = document.getElementById("inputWidth").value;
   let table = document.getElementById("pixelCanvas");
+  table.innerHTML = "";
   
   for (let i = 0; i < height; i++) {
     let tr = document.createElement("tr");
