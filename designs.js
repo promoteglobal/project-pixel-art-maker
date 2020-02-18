@@ -27,12 +27,14 @@ p2.addEventListener("click", changeColor);
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid() {
+  let height = document.getElementById("inputHeight").value;
+  let width = document.getElementById("inputWidth").value;
   let table = document.getElementById("pixelCanvas");
   
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < height; i++) {
     let tr = document.createElement("tr");
     
-    for (let y = 0; y < 6; y++) {
+    for (let y = 0; y < width; y++) {
       let td = document.createElement("td");
       tr.appendChild(td);
     }
