@@ -1,4 +1,3 @@
-// Select color input
 let colorPicked;
 
 function selectColor (event) {
@@ -6,25 +5,13 @@ function selectColor (event) {
 }
 
 function changeColor (event) {
-  event.target.style.color = colorPicked;
+  console.log('clicked');
+  event.target.style.backgroundColor = colorPicked;
 }
-
 
 const colorEl = document.getElementById("colorPicker");
 colorEl.addEventListener("change", selectColor);
 
-const p1 = document.querySelector("#one");
-p1.addEventListener("click", changeColor);
-
-const p2 = document.querySelector("#two");
-p2.addEventListener("click", changeColor);
-
-
-
-// Select size input
-
-
-// When size is submitted by the user, call makeGrid()
 
 function makeGrid() {
   let height = document.getElementById("inputHeight").value;
@@ -37,6 +24,7 @@ function makeGrid() {
     
     for (let y = 0; y < width; y++) {
       let td = document.createElement("td");
+      td.addEventListener("click", changeColor);
       tr.appendChild(td);
     }
     table.appendChild(tr);
